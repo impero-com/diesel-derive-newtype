@@ -28,5 +28,5 @@ proc-macro = true
 path = "src/lib.rs"
 
 [patch.crates-io]
-diesel = { git = "https://github.com/Boscop/diesel", rev = "44281c6" }
-diesel_derives = { git = "https://github.com/Boscop/diesel", rev = "44281c6" }
+diesel = { git = "https://github.com/impero-com/diesel", rev = "8a818f4" }
+diesel_derives = { git = "https://github.com/impero-com/diesel", rev = "8a818f4" }

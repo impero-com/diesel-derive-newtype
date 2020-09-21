@@ -233,7 +233,7 @@ fn gen_from_sql(name: &syn::Ident, wrapped_ty: &syn::Type) -> TokenStream {
             DB: diesel::backend::Backend,
             DB: diesel::sql_types::HasSqlType<ST>,
         {
-            fn from_sql(raw: Option<diesel::backend::RawValue<DB>>)
+            fn from_sql(raw: Option<&<DB as diesel::backend::Backend>::RawValue>)
             -> ::std::result::Result<Self, Box<::std::error::Error + Send + Sync>>
             {
                 diesel::deserialize::FromSql::<ST, DB>::from_sql(raw)
